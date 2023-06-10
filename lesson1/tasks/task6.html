@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/common.css">
+   <title>task 6</title>
+</head>
+<body>
+   <h1>Задача №6</h1>
+   <p> З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+         Обчислити вартість кожного товару окремо та загальну вартість.
+         Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+   <script>
+      // вводимо данні
+      let numberTea = parseInt(prompt("Введіть кількість пачок чаю будь-ласка","3"))
+      let numberCoffee = parseInt(prompt("Введіть кількість пачок кави будь-ласка","3"))
+      let numberMilk = parseInt(prompt("Введіть кількість пачок молока будь-ласка","3"))
+      let priceTea = parseFloat(prompt("введіть будь-ласка ціну пачки чаю","2.5"))
+      let priceCoffee = parseFloat(prompt("введіть будь-ласка ціну пачки кави","2.5"))
+      let priceMilk = parseFloat(prompt("введіть будь-ласка ціну пачки молока","2.5"))
+      // обчислюємо
+      let sumTea = numberTea * priceTea
+      let sumCoffee = numberCoffee * priceCoffee
+      let sumMilk = numberMilk * priceMilk
+      let totalSum = sumTea + sumCoffee + sumMilk
+      // виводимо результат
+      document.write(`
+      <table>
+         <tr>
+            <th>Назва товару</th>
+            <th>Кількість  товару</th>
+            <th>Ціна товару</th>
+            <th>Загальна сума</th>
+         </tr>
+         <tr>
+            <td>Чай</td>
+            <td>${numberTea}</td>
+            <td>${priceTea}</td>
+            <td>${sumTea}</td>
+         </tr> 
+         <tr>
+            <td>Кофе</td>
+            <td>${numberCoffee}</td>
+            <td>${priceCoffee}</td>
+            <td>${sumCoffee}</td>
+         </tr>
+         <tr>
+            <td>Молоко</td>
+            <td>${numberMilk}</td>
+            <td>${priceMilk}</td>
+            <td>${sumMilk}</td>
+         </tr>
+         <tr>
+            <td >Разом</td> 
+            <td colspan="3">${totalSum}</td>
+         </tr>
+         </table>       
+      `)
+   </script>
+</body>
+</html>

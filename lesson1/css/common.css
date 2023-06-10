@@ -1,0 +1,41 @@
+@import url(reset.css);
+h1{
+   font-size: 40px;
+   text-align: center;
+   margin-bottom: 20px;
+   font-weight: 700;
+}
+
+p {
+   font-size: 20px;
+   text-align: center;
+   font-weight: 500;
+}
+img {
+   max-width: 100%;
+   margin: 0 auto;
+   display: block;
+}
+
+ul {
+   text-align: center;
+   font-size: 40px;
+   font-weight: 500;
+   color: rgb(36, 105, 36);
+}
+
+table{
+   border: 1px solid blue;
+   text-align: center;
+   margin: 0 auto;
+}
+tr {
+   border: 1px solid blue;
+}
+th {
+   border: 1px solid blue;
+   padding: 10px;
+}
+td {
+   border: 1px solid black;
+}

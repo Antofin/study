@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/common.css">
+   <title>task 7</title>
+</head>
+<body>
+   <h1>Задача №4</h1>
+   <p> Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</p>
+   <script>
+      // вводимо дані
+      let minNumPlace = 1 , maxNumPlace = 12
+      let minNumDay = 0 , maxNumDay = 6 
+      // обчислити
+      let randomPlaceNum = minNumPlace + Math.floor(Math.random()*(maxNumPlace+1))
+      let randomDayNum = minNumDay + Math.floor(Math.random()*(maxNumDay+1))
+      let sumRandomResults = randomPlaceNum + randomDayNum
+      // виводимо
+      document.write(`<p>Випадковий номер місця ${randomPlaceNum}</p><p>Випадковій номер дня${randomDayNum}</p><p>Сума місця та дня ${sumRandomResults}</p>`)
+   </script>
+</body>
+</html>

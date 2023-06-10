@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/common.css">
+   <title>task 4</title>
+</head>
+<body>
+   <h1>Задача №3</h1>
+   <p> Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+   <script>
+      // вводимо данні 
+      let userInput = parseFloat(prompt("введіть кількість сантиметрів бадь-ласка","100"))
+      const meter = 100
+      const kilometer = 10000
+      // обчислити
+      let resultMeter = userInput / meter
+      let resultKm = userInput / kilometer
+
+      // ввиводимо 
+      document.write(`<p> Метрів${resultMeter} Кілометрів ${resultKm}</p>`)
+   </script>
+</body>
+</html>
