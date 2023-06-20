@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Задача №3</h1>
+   <p>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</p>
+   <script>
+      // вводимо данні 
+      const  minValue = 1 , maxValue = 5
+      const randomNumber = minValue + Math.floor(Math.random()*(maxValue - minValue + 1))
+      let userChoise = parseInt(prompt("Введіть число будь-ласка від 1 до 5 включно"))
+      
+      // Умова 
+      if (randomNumber === userChoise) alert("Ви не вгадали від 1 до 5 включно")
+      else {
+         let userChoise = parseInt(prompt("Введіть число будь-ласка"))
+         if (randomNumber === userChoise) alert("Ви не вгадали")
+         else  alert("Ви не вгадали")
+      }
+
+   </script>
+</body>
+</html>

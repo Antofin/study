@@ -1,0 +1,33 @@
+@import url(reset.css);
+
+
+.wraper{
+   display: flex;
+   flex-direction: column;
+   overflow: clip;
+   min-height: 100%;
+   background-color: rgb(150, 122, 150);
+}
+main{
+   flex-grow: 1;
+}
+
+.main__container {
+   max-width: 1470px;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin: 0 auto;
+   padding-top: 100px;
+}
+
+h1,a {
+   text-align: center;
+   font-size: 30px;
+   color: green;
+   margin-bottom: 20px;
+   display: block;
+}
+
+p{
+   font-size: 20px;
+}
