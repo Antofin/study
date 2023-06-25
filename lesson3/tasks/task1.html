@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../style/style.css">
+   <title>Task 1</title>
+</head>
+<body>
+   <h1>Задача №-2</h1>
+   <p>Задача -2. Поступово генерувати 100 випадкових чисел від 1 до 1000. Підрахувати яких чисел більше: парних чи непарних.</p>
+   <script>
+      // Задача -2. Поступово генерувати 100 випадкових чисел від 1 до 1000. Підрахувати яких чисел більше: парних чи непарних.
+      // Вводимо дані
+      let minNumber = 1
+      let maxNumber = 1000
+      let evenNum = 0
+      let oddNum = 0
+
+      for (let i = 0; i < 1000; i++) {
+         const randomNum = minNumber + Math.floor(Math.random() * (maxNumber - minNumber +1))
+         if(randomNum %2 === 0)
+         evenNum++
+         else
+         oddNum++
+      }
+      document.write(`Парних-${evenNum}штук <br> Непарних- ${oddNum}штук`)
+   </script>
+</body>
+</html>

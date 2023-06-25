@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../style/style.css">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Задача 1.</h1>
+   <p> Вивести з використанням циклів маркований список з
+       випадковими числами (1-100).
+        Кількість випадкових чисел вводиться користувачем. Приклад:</p>
+        <script>
+         // Задача 1. Вивести з використанням циклів маркований список з випадковими числами (1-100). Кількість випадкових чисел вводиться користувачем. Приклад:
+         let userCountRandomNum = parseInt(prompt("Введіть будь-ласка кількість випадкловіх чисел"))
+         let minNum = 1
+         let maxNum = 100
+
+         document.write("<ol>")
+            for (let i = 0; i < userCountRandomNum; i++) {
+               const randomNum = minNum + Math.floor(Math.random() *(maxNum - minNum +1))
+               document.write(`<li class="list__item">${randomNum}</li>`)
+               }
+               document.write("</ol>")
+        </script>
+</body>
+</html>

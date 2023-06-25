@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../style/style.css">
+   <title>Task 4</title>
+</head>
+<body>
+   <h1>Задача 2</h1>
+   <p> Створити 10 елементів для введення цін продуктів</p>
+   <script>
+      // Задача 2. Створити 10 елементів для введення цін продуктів
+      document.write("<form>")
+      for (let i = 1; i <= 10; i++) {
+         document.write(`<label for="product${i}">Product#${i}</label>`)
+            document.write(`<input type="number id="product${i}"></input>`)
+      }
+      document.write("</form>")
+   </script>
+</body>
+</html>
