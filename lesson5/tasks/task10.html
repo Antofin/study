@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../style/style.css">
+   <title>Task #9</title>
+</head>
+<body>
+   <h1> Задача 9 </h1> 
+   <p>Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати кількість від’ємних показів температури.</p>
+   <script>
+      // Задача 9. Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати кількість від’ємних показів температури.
+      let temperatures = [10,-10,5,9,-2]
+      function countNegativeTemperatures(temperatures) {
+         let count = 0
+         for (let i = 0; i < temperatures.length; i++) {
+            if(temperatures[i]<0)
+            count++
+         }
+         return count
+      }
+      
+      let result = countNegativeTemperatures(temperatures)
+      alert(result)
+
+
+   </script>
+</body>
+</html>

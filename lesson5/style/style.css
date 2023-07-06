@@ -1,0 +1,65 @@
+@import url(reset.css);
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(147, 233, 147);
+}
+.header {
+}
+.main {
+   flex-grow: 1;
+   max-width: 1470px;
+   padding: 100px 15px;
+   margin: 0 auto;
+}
+
+.main__title ,.tasks__title{
+   font-size: 36px;
+   font-weight: 700;
+   line-height: 1.5;
+   color: rgb(64, 145, 64);
+   text-align: center;
+}
+.main__sub-title{
+   font-size: 24px;
+   font-weight: 500;
+   line-height: 1.5;
+   color: rgb(64, 145, 64);
+   margin-bottom: 40px;
+   text-align: center;
+}
+.main__items {
+}
+.main__item {
+   padding: 20px 20px;
+   margin-bottom: 30px;
+   border: 1px solid rgb(96, 145, 96);
+   border-radius: 7px;
+   box-shadow: 5px 4px 5px 3px rgb(78, 125, 78);
+}
+.main__link {
+   font-size: 24px;
+   color: green;
+   font-weight: 500;
+   line-height: 1.5;
+   transition: color 0.3s;
+}
+.main__link:hover{
+   color: rgb(5, 46, 5);
+}
+.main__content ,.tasks__content {
+   font-size: 18px;
+   line-height: 1.5;
+   font-weight: 500;
+}
+
+table{
+   border: 1px solid black;
+}
+
+td{
+   border: 1px solid black;
+   padding: 10px;
+}

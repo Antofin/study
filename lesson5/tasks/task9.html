@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../style/style.css">
+   <title>Task #9</title>
+</head>
+<body>
+   <h1>Задача 8</h1>
+   <p>
+Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди переходимо при кліку на зображення (тег img повине знаходитись у середині тега a:
+   </p>
+   <script>
+      // Задача 8. Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди переходимо при кліку на зображення (тег img повине знаходитись у середині тега a: <a> <img src=”шлях”> </a>
+      let image = "../img/Rectangle 4504 (1).jpg";
+      let link = "https://www.youtube.com/shorts/IrM8k7D32ng";
+      let title = "My banner";
+
+      function showBanner(image,title,link) {
+         document.write(
+            `<a href="${link}">
+               <img src="${image}"/>
+               </a>
+               <h1>${title}</h1>
+            `
+         )
+      }
+      let bannerView = showBanner(image,title,link)
+      document.write(bannerView)
+   </script>
+</body>
+</html>

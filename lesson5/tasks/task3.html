@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../style/style.css">
+   <title>Task 3</title>
+</head>
+<body>
+   <h1>Задача №2</h1>
+   <p>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</p>
+   <script>
+      // Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.
+      function workDayOrFreeDay(dayNumber) {
+         switch (dayNumber) {
+            case 1:
+            case 2: 
+            case 3: 
+            case 4: 
+            case 5: return "Нажаль робочий день"
+            case 6: 
+            case 7: return "Ура вітаю Вихідний"
+            
+         
+            default:
+               return "Нажаль у тижні всього 7 днів"
+         }
+      }
+      let userDayNum = parseInt(prompt("Введіть будь ласка номер дня тидня від 1 до 7"))
+      alert(workDayOrFreeDay(userDayNum))
+   </script>
+</body>
+</html>
