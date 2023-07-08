@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Task 4</title>
+</head>
+<body>
+   <h1>Задача 6</h1>
+   <p>Дано послідовність цін товарів та назв (у окремих масивах). Вивести на екран ті, які може собі дозволити користувач (кількість грошей задається).</p>
+   <script>
+      // Задача 6. Дано послідовність цін товарів та назв (у окремих масивах).
+      //  Вивести на екран ті, які може собі дозволити користувач (кількість грошей задається).
+      
+
+      let productPrice = [1000,20,31]
+      let productName = ["cheese", "juice", "bread"]
+      let userMoney = parseFloat(prompt("Введіть будь- ласка кількість грошей яку маєте"))
+
+      function affordableProducts(prices,name,money) {
+         let result = []
+         for (let i = 0; i < prices.length; i++) {
+            if (money>=prices[i]) {
+               result.push(name[i])
+            }
+            
+         }
+         return result
+      }
+
+      let result = affordableProducts(productPrice,productName,userMoney)
+      document.write(`На ці грощі ви можете купити 900;${result} `)
+   </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Task 5</title>
+</head>
+<body>
+   <h1>Задача 7</h1>
+   <p> Дано послідовність платіжок протягом року. Знайти сумарну кількість грошей за:
+      за весь рік;
+      у першій половині року;
+      у другій половині року;
+      за літо;
+      за ІІ квартал;
+      за парні місяці (з парними номерами);
+      за місяці, які є початковими у сезоні (весна, літо, осінь, зима).
+      </p>
+
+      <script>
+         // Задача 7. Дано послідовність платіжок протягом року. Знайти сумарну кількість грошей за:
+// за весь рік;
+// у першій половині року;
+// у другій половині року;
+// за літо;
+// за ІІ квартал;
+// за парні місяці (з парними номерами);
+// за місяці, які є початковими у сезоні (весна, літо, осінь, зима).
+let paymentsPerYear = [230,450,120,300,400,800,760,650,870,980,200,120]
+
+function getSumPerYear(payments) {
+   let sum = 0
+   for (let i = 0; i < payments.length; i++) {
+      sum +=payments[i]
+      
+   }
+   return sum
+}
+
+function getSumPerFirstHalfYear(payments) {
+   let sum= 0
+   for (let i = 0; i < 6; i++) {
+      sum += payments[i]
+      
+   }
+   return sum
+}
+
+function getSumPerLastHAlfYear(payments) {
+   let sum= 0
+   for (let i = 6; i < 12; i++) {
+      sum += payments[i]
+      
+   }
+   return sum
+}
+
+function getSumPerSummer(payments) {
+   let sum =0
+   for (let i = 5; i < 8; i++) {
+     sum += payments[i]
+      
+   }
+   return sum
+}
+
+function getSumPerSecondQuarter(payments) {
+   let sum = 0
+   for (let i = 3; i < 6; i++) {
+      sum += payments[i]
+      
+   }
+   return sum
+}
+
+function getSumPerEvenMonth(payments) {
+   let sum = 0
+   for (let i = 1; i < payments.length; i+=2) {
+      sum += payments[i]
+      
+   }
+   return sum
+}
+
+function getSumFromFirstsMonthsSeasons(payments) {
+   let sum = 0
+   for (let i = 2; i < payments.length; i+=3) {
+      sum += payments[i]
+      
+   }
+   return sum
+}
+let sumPerYear = getSumPerYear(paymentsPerYear)
+
+
+let sumPerFirstHalfYear = getSumPerFirstHalfYear(paymentsPerYear)
+document.write( `Сума за перше піврічча = ${sumPerFirstHalfYear}<br> `)
+
+let sumPerLastHalfYear = getSumPerLastHAlfYear(paymentsPerYear)
+
+
+let sumPerSummer = getSumPerSummer(paymentsPerYear)
+
+let sumPerSecondQuarter = getSumPerSecondQuarter(paymentsPerYear)
+
+let sumPerEvenMonth = getSumPerEvenMonth(paymentsPerYear)
+
+let sumFirstsMonthSeasons = getSumFromFirstsMonthsSeasons(paymentsPerYear)
+
+document.write(`Сума грошей за рік = ${sumPerYear}<br>
+Сума за друге піврічча = ${sumPerLastHalfYear}<br>
+Сума за літо = ${sumPerSummer}<br>
+Сума за другий квартал = ${sumPerSecondQuarter}<br>
+Сумма за місяці з парними номерами ${sumPerEvenMonth}<br>
+Сума за перші місяця сезону = ${sumFirstsMonthSeasons} `)
+      </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Task 1</title>
+</head>
+<body>
+   <h1>Задача 1</h1>
+   <p>Дано масив, який містить оцінки з К предметів.
+       Знайти середній бал і з’ясувати до якої категорії він відноситься 
+       (відмінник, двійочник (має хоча би одну двійку),
+        хорошист (оцінки добре і відмінно), 
+        трійочник(є хоча би одна трійка)).</p>
+        <script>
+         // Задача 1. Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії він відноситься 
+         // (відмінник, двійочник (має хоча би одну двійку),
+         //  хорошист (оцінки добре і відмінно), 
+         // трійочник(є хоча би одна трійка)).
+         // 1 . З'ясовуємо середній бал 
+         function averageScore(scores) {
+            let scoresSum = 0
+            for (let i = 0; i < scores.length; i++) {
+               scoresSum+=scores[i]
+            }
+
+            return Math.floor(scoresSum / scores.length)
+         }
+         let scores = [2,5,4,3,2,5,3,4,5]
+         // виводимо середню оцінку
+         let resultAverageScore = averageScore(scores)
+         // Визнвчаємо категорію
+         function getCategory(averageScore) {
+            switch (averageScore) {
+               case 1:
+               case 2:   
+                  return "двіїчник"
+               case 3:
+               return "трійочник"
+               case 4: 
+               case 5: 
+               return "відмінник"
+            }
+            
+         }
+
+         let resultCategory = getCategory(resultAverageScore)
+         alert(resultCategory)
+        </script>
+</body>
+</html>

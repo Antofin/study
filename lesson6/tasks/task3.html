@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>Task 3</title>
+</head>
+<body>
+   <h1>Задача 5</h1>
+   <p> Дано послідовність оцінок учня. Підрахувати кількість:
+      1)	двійок
+      2)	кількість хороших оцінок (добре, відмінно);
+      3)	кількість оцінок, які нижче середнього.</p>
+      <script>
+         // Задача 5. Дано послідовність оцінок учня. Підрахувати кількість:
+// 1)	двійок
+// 2)	кількість хороших оцінок (добре, відмінно);
+// 3)	кількість оцінок, які нижче середнього.
+let scores = [2,5,5,4,3,2,2,4,1]
+// середня оцінка
+function getAverageScore(scores) {
+            let scoresSum = 0
+            for (let i = 0; i < scores.length; i++) {
+               scoresSum+=scores[i]
+            }
+
+            return Math.floor(scoresSum / scores.length)
+         }
+
+
+      // кількість оцінок менше за середню
+
+
+function getCountScoresLessThanAverage(scores,averageScore) {
+   let count = 0
+   for (let i = 0; i < scores.length; i++) {
+      if(scores[i]< averageScore)
+      count++
+   }
+   return count
+}
+
+// кількість оцінок добре та відмінно
+
+
+function getCountWellGoodScores(scores) {
+   let count = 0
+   for (let i = 0; i < scores.length; i++) {
+      if(scores[i]>= 4 && 5)
+      count++
+   }
+   return count
+}
+
+// кількість двійок 
+
+function badScores(scores) {
+   let count = 0
+   for (let i = 0; i < scores.length; i++) {
+      if (scores[i] === 2) {
+         count++
+      }
+      
+   }
+   return count
+}
+
+
+//  виводимо результат
+
+let averageScore = getAverageScore(scores)
+let resultLessThanAverage = getCountScoresLessThanAverage(scores,averageScore)
+let resultGoodScores = getCountWellGoodScores(scores)
+let resultBadScores =badScores(scores)
+document.write(`Дійок = ${resultBadScores}<br>`)
+document.write(`Кількість хороших оцінок = ${resultGoodScores}<br>`)
+document.write(`Кількість оцінок нижче середньої = ${resultLessThanAverage}`)
+      </script>
+</body>
+</html>
